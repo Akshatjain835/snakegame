@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    background: url("/img/bg.jpg");
+    min-height: 100vh;   /*minheight:100vh matlab jis aap view [port device hain uski height*/
+    background-size: 100vw 100vh;  /*min-height and background isze are important for background*/
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board{
+    background: linear-gradient(rgb(128, 220, 128),rgb(219, 219, 161));
+    width: 90vmin;   /*isse height and width jo bada hoga vo vmax hoga and jo chota hoga vo vmin */
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+.head{
+    background:linear-gradient(rgb(242, 128, 128),rgb(227, 227, 118));
+    border: 2px solid rgb(77, 6, 77);
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: purple;   /*we donot have to specify the height and width of the food because we are using the  display:grid and gridRowStart and gridColumnStart*/
+     border: 0.25vmin solid white;
+     border-radius: 12px;
+}
+.food{
+    background:linear-gradient(red,purple);
+    border: 0.25vmin solid black;
+    border-radius: 8px;
+    
+}
+
+#scorebox{
+    position: absolute;
+    top:9px;
+    right: 280px;
+    font-size: 39px;
+    font-weight: bold;
+}
+
+#highscorebox{
+    position: absolute;
+    top:59px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+}
